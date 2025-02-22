@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crafting Dead Reconstruction</title>
-    <meta http-equiv="refresh" content="5;" url=https://www.mediafire.com/file/ihy321mgopb4ums/CraftDeadAndFerulloGunMod.zip/file>
+    <meta http-equiv="refresh" content="100; url=https://www.mediafire.com/file/ihy321mgopb4ums/CraftDeadAndFerulloGunMod.zip/file">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
 <script>
     const urloutput = document.getElementById('urloutput');
     var urlfromtag = document.querySelector('meta[http-equiv="refresh"]');
-    var urllink = urlfromtag.getAttribute('url');
+    var urllink = urlfromtag.getAttribute('content');
 
     urloutput.innerHTML = "<a href=' " + urllink + " '>" + urllink + "</a>"  ;
 
