@@ -4,14 +4,55 @@
     <style>
         body {
             text-align: center;
+            font-family: sans-serif;
         }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crafting Dead Reconstruction</title>
-    <meta http-equiv="refresh" content="5; url=https://www.mediafire.com/file/3v1bh9vtckd808m/CraftDeadAndFerulloGunModWithCommandBlockBreakFix.zip/file">
+    <meta http-equiv="refresh" content="500; url=https://www.mediafire.com/file/3v1bh9vtckd808m/CraftDeadAndFerulloGunModWithCommandBlockBreakFix.zip/file">
 </head>
 <body>
-   
+    
 </body>
+
+<h1>Crafting Dead Reconstruction</h1>
+
+<p>You will be redirected to the latest download in <span id="timer"></span> seconds <br>
+<p id="noredirect"></p>
+
+
+<script>
+   var reirectmeta = document.querySelector('meta[http-equiv="refresh"]').getAttribute("content");
+   const noredirectele = document.getElementById('noredirect')
+   const timerele = document.getElementById('timer');
+
+   if (reirectmeta) {
+   // checks for https or http in url. Stored in array id 0, has the raw url, and returns it.
+   var filter = reirectmeta.match(/https:(.*)|http:(.*)/i)[0];
+   }
+
+
+   var time = 6;
+   function TimerDown() {
+    time--
+    timerele.innerHTML = time;
+
+    if (time <= 0) {
+        clearInterval(timeinterval)
+        noredirectele.innerHTML = "If you were not redirected, please follow the link below:" + '<br>' + '<br>' +
+      ' <a href=" ' +  filter + ' "> '  + filter + '</a>'
+    }
+
+  }
+
+ const timeinterval = setInterval(TimerDown, 1000)
+
+ // calls so it starts the timer immediately
+ setTimeout(TimerDown, 0)
+
+
+   
+</script>
+
 </html>
