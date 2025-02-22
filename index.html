@@ -13,20 +13,7 @@
 
 </head>
 <body>
-
-    <p> If you were not redirected, please click the link below: <p>
-
-    <p id="urloutput"></p>
-
    
 </body>
 
-<script>
-    const urloutput = document.getElementById('urloutput');
-    var urlfromtag = document.querySelector('meta[http-equiv="refresh"]');
-    var urllink = urlfromtag.getAttribute('content');
-
-    urloutput.innerHTML = "<a href=' " + urllink + " '>" + urllink + "</a>"  ;
-
- </script>
 </html>
